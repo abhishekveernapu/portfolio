@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+/* ===== GEIST FONT FACES ===== */
+@font-face {
+  font-family: 'Geist Sans';
+  src: local('Geist Sans'), local('GeistSans'), local('Inter');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: local('Geist Mono'), local('GeistMono'), local('Fira Code');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* ===== BASE STYLES (saddine.com design system) ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Geist Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  letter-spacing: 0.01em;
+
+  /* Light mode: stone */
+  background-color: #fafaf9;
+  color: #1c1917;
+}
+
+/* Dark mode: zinc */
+.dark body {
+  background-color: #09090b;
+  color: #fafafa;
+}
+
+/* ===== THEME TRANSITIONS ===== */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a8a29e;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1c1917;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background-color: rgba(28, 25, 23, 0.15);
+  color: inherit;
+}
+
+.dark ::selection {
+  background-color: rgba(250, 250, 250, 0.15);
+  color: inherit;
+}
+
+/* ===== GLASSMORPHISM (saddine-style backdrop blur) ===== */
+.glass {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #1c1917 0%, #78716c 50%, #1c1917 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 50%, #fafafa 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-accent {
+  box-shadow: 0 0 20px rgba(28, 25, 23, 0.08),
+              0 0 60px rgba(28, 25, 23, 0.03);
+}
+
+.dark .glow-accent {
+  box-shadow: 0 0 20px rgba(250, 250, 250, 0.04),
+              0 0 60px rgba(250, 250, 250, 0.01);
+}
+
+/* ===== CURSOR STYLES ===== */
+.cursor-none * {
+  cursor: none !important;
+}
+
+/* ===== HIDE SCROLLBAR FOR HORIZONTAL SCROLL ===== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===== LOADER OVERLAY ===== */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== GRID PATTERN (saddine-style dot grid) ===== */
+.grid-pattern {
+  background-image:
+    radial-gradient(circle, rgba(168, 162, 158, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .grid-pattern {
+  background-image:
+    radial-gradient(circle, rgba(63, 63, 70, 0.3) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ===== SECTION DIVIDERS ===== */
+.section-divider {
+  border-top: 1px solid #e7e5e4;
+}
+
+.dark .section-divider {
+  border-top: 1px solid #27272a;
+}
+
+/* ===== GPU ACCELERATION & SMOOTH ANIMATION ===== */
+/* Force GPU compositing for all motion elements */
+[style*="transform"],
+[style*="opacity"] {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* Smooth image rendering during transforms */
+img {
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Reduce paint areas for animated containers */
+.rounded-2xl {
+  contain: layout style;
+}

@@ -52,14 +52,6 @@ export default function About() {
                   <MapPin size={14} className="text-stone-900 dark:text-zinc-100" />
                   {personal.location}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-stone-500 dark:text-zinc-400">
-                  <Calendar size={14} className="text-stone-900 dark:text-zinc-100" />
-                  {personal.stats.experience} years experience
-                </div>
-                <div className="flex items-center gap-2 text-sm text-stone-500 dark:text-zinc-400">
-                  <Coffee size={14} className="text-stone-900 dark:text-zinc-100" />
-                  Powered by caffeine
-                </div>
               </div>
             </FadeUp>
 
@@ -110,24 +102,7 @@ export default function About() {
             </SectionReveal>
 
             {/* Stats Grid */}
-            <StaggerContainer className="grid grid-cols-3 gap-3">
-              {[
-                { value: personal.stats.experience, label: "Years Exp" },
-                { value: personal.stats.projects, label: "Projects" },
-                { value: personal.stats.commits, label: "Commits" },
-              ].map((stat) => (
-                <StaggerItem key={stat.label}>
-                  <div className="text-center p-4 rounded-2xl border border-stone-300 dark:border-zinc-700 bg-stone-100 dark:bg-zinc-800 shadow-sm">
-                    <p className="text-2xl font-display font-bold text-stone-900 dark:text-zinc-100">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs text-stone-400 mt-1 font-mono">
-                      {stat.label}
-                    </p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+            
           </div>
         </div>
       </div>

@@ -7,8 +7,8 @@ import { personal } from "@/data/personal"
 
 const techStack = [
   "React.js", "Node.js", "Express.js", "MongoDB",
-  "Next.js", "JavaScript", "Python", "FastAPI",
-  "Tailwind CSS", "Git", "Docker", "REST APIs",
+   "JavaScript", "Python", 
+   "Git", "REST APIs",
 ]
 
 export default function About() {

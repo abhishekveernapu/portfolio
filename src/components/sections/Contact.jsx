@@ -152,7 +152,7 @@ export default function Contact() {
       <div className="border-t border-stone-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto px-6 py-10 md:py-12">
           <p className="text-center text-[13px] text-stone-400 dark:text-zinc-500 flex items-center justify-center gap-1.5">
-            Made with <Heart size={12} className="text-red-400 fill-red-400" /> by {personal.name.split(" ")[0]}
+            Made with Antigravity by {personal.name.split(" ")[0]}
           </p>
         </div>
       </div>

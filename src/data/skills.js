@@ -11,11 +11,8 @@ export const skillCategories = [
     color: "stone",
     skills: [
       { name: "React.js", level: 95 },
-      { name: "Next.js", level: 80 },
       { name: "JavaScript (ES6+)", level: 92 },
       { name: "HTML5 / CSS3", level: 95 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "Framer Motion", level: 75 },
     ],
   },
   {
@@ -25,8 +22,6 @@ export const skillCategories = [
     skills: [
       { name: "Node.js", level: 90 },
       { name: "Express.js", level: 90 },
-      { name: "Python", level: 70 },
-      { name: "FastAPI", level: 65 },
       { name: "REST APIs", level: 92 },
       { name: "Socket.io", level: 70 },
     ],
@@ -50,9 +45,7 @@ export const skillCategories = [
     skills: [
       { name: "Git & GitHub", level: 90 },
       { name: "VS Code", level: 95 },
-      { name: "Postman", level: 85 },
-      { name: "Figma", level: 60 },
-      { name: "npm / yarn", level: 85 },
+      { name: "npm", level: 85 },
       { name: "Chrome DevTools", level: 88 },
     ],
   },
@@ -61,12 +54,11 @@ export const skillCategories = [
     icon: Cloud,
     color: "cyan",
     skills: [
-      { name: "Docker", level: 55 },
       { name: "Vercel", level: 85 },
       { name: "Netlify", level: 80 },
       { name: "Linux", level: 65 },
-      { name: "CI/CD", level: 60 },
-      { name: "Nginx", level: 50 },
+      { name: "Railway", level: 60 },
+      { name: "Render", level: 50 },
     ],
   },
 ]

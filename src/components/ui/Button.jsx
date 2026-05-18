@@ -4,15 +4,10 @@ import { motion } from "framer-motion"
 const variants = {
   primary: "bg-stone-900 dark:bg-zinc-100 text-stone-50 dark:text-zinc-900 hover:bg-stone-800 dark:hover:bg-zinc-200 shadow-lg shadow-stone-900/10 dark:shadow-zinc-100/10",
   secondary: "border border-stone-300 dark:border-zinc-700 text-stone-900 dark:text-zinc-100 hover:bg-stone-100 dark:hover:bg-zinc-800",
-  ghost: "text-stone-600 dark:text-zinc-400 hover:text-stone-900 dark:hover:text-zinc-100 hover:bg-stone-100 dark:hover:bg-zinc-800/50",
-  outline: "border border-stone-300 dark:border-zinc-700 text-stone-900 dark:text-zinc-100 hover:bg-stone-100 dark:hover:bg-zinc-800",
 }
 
 const sizes = {
-  sm: "px-3 py-1.5 text-sm",
-  md: "px-5 py-2.5 text-sm",
   lg: "px-7 py-3 text-base",
-  xl: "px-8 py-4 text-base",
 }
 
 export default function Button({

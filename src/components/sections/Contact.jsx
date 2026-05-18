@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, ArrowUp, Heart } from "lucide-react"
+import { Mail, MapPin, ArrowUp, Heart, Copy, Check } from "lucide-react"
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons"
 import { personal } from "@/data/personal"
 
@@ -94,6 +94,14 @@ export default function Contact() {
                   <Mail size={16} className="text-stone-400 dark:text-zinc-500 shrink-0" />
                   {personal.email}
                 </a>
+                <button
+                  onClick={copyEmail}
+                  className="relative inline-flex items-center justify-center w-8 h-8 rounded-full border border-stone-300 dark:border-zinc-600 text-stone-400 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-zinc-100 hover:border-stone-500 dark:hover:border-zinc-400 transition-all duration-200"
+                  title={copied ? "Copied!" : "Copy email"}
+                  aria-label="Copy email to clipboard"
+                >
+                  {copied ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
+                </button>
                 <span className="inline-flex items-center gap-2.5 text-[15px] text-stone-600 dark:text-zinc-300">
                   <MapPin size={16} className="text-stone-400 dark:text-zinc-500 shrink-0" />
                   {personal.location}

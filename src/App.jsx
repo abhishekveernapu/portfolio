@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react"
+import { useState } from "react"
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 
@@ -52,10 +52,6 @@ function AnimatedRoutes() {
 export default function App() {
   const [loading, setLoading] = useState(true)
 
-  const handleLoaderComplete = useCallback(() => {
-    setLoading(false)
-  }, [])
-
   return (
     <BrowserRouter>
       {/* Global Overlays */}
@@ -65,7 +61,7 @@ export default function App() {
 
       {/* Loader */}
       <AnimatePresence>
-        {loading && <Loader onComplete={handleLoaderComplete} />}
+        {loading && <Loader onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
       {/* Main Content */}

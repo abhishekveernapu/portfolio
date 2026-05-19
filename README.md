@@ -1,6 +1,6 @@
-# 🚀 Abhishek Veernapu — Portfolio
+# Abhishek Veernapu — Portfolio
 
-A modern, responsive personal portfolio website built with React, Vite, and Tailwind CSS — showcasing my projects, skills, and experience as an AI & Data Science developer.
+A modern, responsive personal portfolio website built with React, Vite, and Tailwind CSS — showcasing projects, skills, and experience as an AI & Data Science developer.
 
 ## ✨ Features
 
@@ -13,27 +13,39 @@ A modern, responsive personal portfolio website built with React, Vite, and Tail
 
 ## 🛠️ Tech Stack
 
-| Category      | Technology                          |
-|---------------|--------------------------------------|
-| Framework     | React 19 + Vite 8                   |
-| Styling       | Tailwind CSS v4, tailwind-merge, clsx|
-| Animations    | Framer Motion                        |
-| Routing       | React Router DOM v7                  |
-| Icons         | Lucide React                         |
-| Linting       | ESLint 10                            |
+| Category   | Technology                            |
+|------------|---------------------------------------|
+| Framework  | React 19 + Vite 8                     |
+| Styling    | Tailwind CSS v4, tailwind-merge, clsx |
+| Animations | Framer Motion                         |
+| Routing    | React Router DOM v7                   |
+| Icons      | Lucide React                          |
+| Linting    | ESLint 10                             |
 
 ## 📂 Project Structure
-portfolio/
-├── public/ # Static assets
-├── src/ # React source code
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Route-level page components
-│ └── main.jsx # App entry point
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-└── .env.example # Environment variable template
 
+```
+portfolio/
+├── public/                   # Static assets (images, favicon, etc.)
+├── src/
+│   ├── components/           # Reusable UI components (Navbar, Footer, Cards, etc.)
+│   ├── context/              # React Context providers (theme, state management)
+│   ├── data/                 # Static data files (projects, skills, experience)
+│   ├── hooks/                # Custom React hooks
+│   ├── lib/                  # Utility/helper functions
+│   ├── pages/                # Route-level page components (Home, About, Projects, etc.)
+│   ├── App.jsx               # Root component with routing setup
+│   ├── main.jsx              # App entry point
+│   └── index.css             # Global styles & Tailwind directives
+├── index.html                # HTML entry point
+├── vite.config.js            # Vite configuration
+├── tailwind.config.js        # Tailwind CSS configuration
+├── eslint.config.js          # ESLint configuration
+├── jsconfig.json             # JS path aliases
+├── postcss.config.js         # PostCSS configuration
+├── .env.example              # Environment variable template
+└── .gitignore
+```
 
 ## 🚀 Getting Started
 
@@ -76,8 +88,8 @@ npm run preview   # Preview the production build locally
 
 This project can be deployed to any static hosting platform:
 
-- **Vercel** — `vercel --prod`
-- **Netlify** — Drag & drop the `dist/` folder
+- **Vercel** — Connect GitHub repo and deploy automatically
+- **Netlify** — Drag & drop the `dist/` folder or connect via Git
 - **GitHub Pages** — Use `gh-pages` package with Vite base config
 - **Firebase Hosting** — `firebase deploy`
 
@@ -91,12 +103,12 @@ Copy `.env.example` to `.env` and fill in the required values:
 
 ## 📜 Scripts
 
-| Command           | Description                    |
-|-------------------|-------------------------------|
-| `npm run dev`     | Start development server       |
-| `npm run build`   | Build for production           |
-| `npm run preview` | Preview production build       |
-| `npm run lint`    | Run ESLint                     |
+| Command            | Description                     |
+|--------------------|---------------------------------|
+| `npm run dev`      | Start development server        |
+| `npm run build`    | Build for production            |
+| `npm run preview`  | Preview production build        |
+| `npm run lint`     | Run ESLint                      |
 
 ## 👤 Author
 
